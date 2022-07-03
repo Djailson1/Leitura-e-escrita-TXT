@@ -1,11 +1,7 @@
-Djailson Silva; dj@hotmail.com; 26
-Fulano Santos; fulano@hotmail.com; 67
-Furosteca; furoasteca@hotmail.com; 45
+Djailson Silva|dj@hotmail.com|26
+Fulano Santos|fulano@hotmail.com|67
+Furosteca|furoasteca@hotmail.com|45
 
-Furos; asteca@hotmail.com; 45
+Furos|asteca@hotmail.com|45
 
 
-jhfdj
-dfdf
-dd
-dfg

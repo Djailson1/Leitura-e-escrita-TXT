@@ -24,22 +24,21 @@ public class LerArquivoTxt {
 			
 			if(linha != null && !linha.isEmpty()) {/*se a linha for válida*/
 			
-			String[]dados = linha.split("\\;");/*quebra essa linha separando os dados*/
+			String[]dados = linha.split("\\|");/*quebra essa linha separando os dados*/
 			/*cada linha depois de instanciada é um novo objeto*/
 			Pessoa pessoa = new Pessoa();
-			pessoa.setEmail(dados[0]);
-			pessoa.setNome(dados[1]);
+			pessoa.setNome(dados[0]);
+			pessoa.setEmail(dados[1]);
 			pessoa.setIdade(Integer.parseInt(dados[2]));
 			/*setando as posições na lista*/
 			pessoas.add(pessoa);
 			/*adicionando na lista*/
 				
-			}
-			
-			
+			}	
 		}
-		
-		System.out.println(pessoas);/*chamando a lista de pessoas*/
+		for (Pessoa pessoa : pessoas) {
+			System.out.println(pessoa);
+		}/*chamando a lista de pessoas - poderia gravar no banco de dados, enviar e-mail, gerar boleto, etc*/
 		
 	}
 
