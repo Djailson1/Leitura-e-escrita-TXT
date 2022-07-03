@@ -32,7 +32,7 @@ public class Arquivos {
 		pessoas.add(pessoa3);
 		
 		
-		File arquivo = new File("C:\\Users\\Aluno\\Pictures\\eclipse\\arquivos\\src\\arquivos\\arquivo.txt");
+		File arquivo = new File("C:\\Users\\Aluno\\git\\repository12\\arquivos\\src\\arquivos\\arquivo.txt");
 		
 		if(!arquivo.exists()) {
 			arquivo.createNewFile();
@@ -42,7 +42,7 @@ public class Arquivos {
 		FileWriter escrever_no_arquivo = new FileWriter(arquivo);
 		
 		for (Pessoa p : pessoas) {
-			escrever_no_arquivo.write(p.getNome() + "; " +  p.getEmail() + "; " + p.getIdade() + "\n");
+			escrever_no_arquivo.write(p.getNome() + ";" +  p.getEmail() + ";" + p.getIdade() + "\n");
 		}
 		
 		escrever_no_arquivo.flush();
