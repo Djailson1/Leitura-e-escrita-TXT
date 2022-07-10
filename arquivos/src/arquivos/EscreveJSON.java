@@ -1,12 +1,15 @@
 package arquivos;
 
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 public class EscreveJSON {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
 		Usuario usuario1 = new Usuario();
 		usuario1.setCpf("82782383729237");
@@ -25,9 +28,17 @@ public class EscreveJSON {
 		usuarios.add(usuario1);
 		usuarios.add(usuario2);
 		
-		String jsonUser = new Gson().toJson(usuarios);
+		Gson gson = new GsonBuilder().setPrettyPrinting().create();
+		
+		String jsonUser = gson.toJson(usuarios);
 		
 		System.out.println(jsonUser);
+		
+		FileWriter fileWriter = new FileWriter("C:\\Users\\Aluno\\git\\repository12\\arquivos\\src\\arquivos\\filjson.json");
+		
+		fileWriter.write(jsonUser);
+		fileWriter.flush();
+		fileWriter.close();
 	}
 
 }
