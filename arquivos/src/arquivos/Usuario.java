@@ -13,6 +13,10 @@ public class Usuario implements Serializable{
 	private String login;
 	private String senha;
 	private String cpf;
+	@Override
+	public String toString() {
+		return "Usuario [login=" + login + ", senha=" + senha + ", cpf=" + cpf + ", nome=" + nome + "]";
+	}
 	private String nome;
 	
 	public void setNome(String nome) {
